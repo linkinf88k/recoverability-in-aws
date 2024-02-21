@@ -1,0 +1,53 @@
+C:\Users\TrungVQ7>ssh -i "C:\Users\TrungVQ7\Downloads\oregon-keypair.pem" ec2-user@ec2-35-89-139-224.us-west-2.compute.amazonaws.com
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Wed Feb 21 08:00:50 2024 from 42.118.107.124
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Wed Feb 21 08:00:50 2024 from 42.118.107.124
+[ec2-user@ip-10-2-11-26 ~]$ mysql -u admin -h udacity.crnzem3dp2ag.us-west-2.rds.amazonaws.com -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.35 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> USE UdacityActiveDB
+ERROR 1049 (42000): Unknown database 'UdacityActiveDB'
+MySQL [(none)]> USE UdacityActiveDb;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [UdacityActiveDb]> INSERT INTO sample_table VALUES ('HI SECONDARY');
+Query OK, 1 row affected (0.008 sec)
+
+MySQL [UdacityActiveDb]> SELECT * FROM sample_table;
++--------------+
+| message      |
++--------------+
+| Hello World  |
+| HI SECONDARY |
++--------------+
+2 rows in set (0.001 sec)
+
+MySQL [UdacityActiveDb]>
