@@ -68,7 +68,7 @@ Installed:
   perl-Sys-Hostname-1.23-477.amzn2023.0.6.x86_64
 
 Complete!
-[ec2-user@ip-10-2-11-26 ~]$ mysql -u admin -h udacity.crnzem3dp2ag.us-west-2.rds.amazonaws.com -p
+[ec2-user@ip-10-2-11-26 ~]$ mysql -u admin -h replica-db.crnzem3dp2ag.us-west-2.rds.amazonaws.com -p
 Enter password:
 Welcome to the MariaDB monitor.  Commands end with ; or \g.
 Your MySQL connection id is 44
